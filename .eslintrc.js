@@ -18,9 +18,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+  },
   settings: {
     react: {
       version: '18.2.0',
